@@ -1,6 +1,7 @@
 package com.example.delivery.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "products")
+@Entity
 public class ProductModel {
 
     @Id
@@ -27,5 +29,5 @@ public class ProductModel {
     private String description;
 
     @Column
-    private int price;
+    private double price;
 }

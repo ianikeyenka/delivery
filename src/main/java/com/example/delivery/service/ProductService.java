@@ -1,13 +1,15 @@
 package com.example.delivery.service;
 
-import com.example.delivery.model.ProductModel;
+import com.example.delivery.dto.ProductDTO;
 
 import java.util.List;
 
 public interface ProductService {
-    List<ProductModel> showProducts();
+    List<ProductDTO> showProducts();
 
-    ProductModel showProduct(Long id);
+    ProductDTO showProduct(Long id);
 
-    void createProduct(ProductModel product);
+    void createOrUpdateProduct(ProductDTO productDTO);
+
+    void deleteProduct(Long id);
 }

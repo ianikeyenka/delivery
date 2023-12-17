@@ -1,13 +1,15 @@
 package com.example.delivery.service;
 
-import com.example.delivery.model.OrderModel;
+import com.example.delivery.dto.OrderDTO;
 
 import java.util.List;
 
 public interface OrderService {
-    List<OrderModel> showOrders();
+    List<OrderDTO> showOrders();
 
-    OrderModel showOrder(Long id);
+    OrderDTO showOrder(Long id);
 
-    void createOrder(OrderModel order);
+    void createOrUpdateOrder(OrderDTO orderDTO);
+
+    void deleteOrder(Long id);
 }
